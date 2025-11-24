@@ -1,0 +1,18 @@
+{
+	"name": "linked_service_database_azureprojectspotify",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "database_azureprojectspotify linked service",
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "databaseserver-azureprojectspotify.database.windows.net",
+			"database": "database_azureprojectspotify",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "admingaurav",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDQyNDA1NEVCLTFCQzAtNDg2QS04RDM3LTc0RENDNzNDMTRGN184N2JiMzIzYy05OGQ4LTRjNGEtOTAwMS1iODczYTljZTMzMzkiDQp9"
+		}
+	}
+}
