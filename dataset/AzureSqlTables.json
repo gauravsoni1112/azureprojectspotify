@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlTables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linked_service_database_azureprojectspotify",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
