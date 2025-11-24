@@ -28,12 +28,17 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Destination",
+						"value": "@{'bronze'}/@{'Users'}/@{concat(pipeline().parameters.table,'_',variables('current'))}"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "@SELECT * FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table} WHERE @{pipeline().parameters.cdc_col} > '@{activity('FetchLastCDC').output.value[0].cdc}'",
+							"value": "@SELECT * FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table} WHERE @{pipeline().parameters.cdc_col} > '@{activity('FetchLastCDC').output.firstRow.value[0].cdc}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
