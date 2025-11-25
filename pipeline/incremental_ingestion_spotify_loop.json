@@ -40,12 +40,7 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [
-								{
-									"name": "Destination",
-									"value": "@{'bronze'}/@{'Users'}/@{concat(pipeline().parameters.table,'_',variables('current'))}"
-								}
-							],
+							"userProperties": [],
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
