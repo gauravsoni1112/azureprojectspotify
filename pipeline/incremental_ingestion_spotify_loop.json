@@ -13,7 +13,7 @@
 						"value": "@pipeline().parameters.source_input",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "AzureSQLToDataLake",
@@ -350,7 +350,7 @@
 					{
 						"schema": "dbo",
 						"table": "FactStream",
-						"cdc_col": "updated_at",
+						"cdc_col": "stream_timestamp",
 						"from_date": ""
 					}
 				]
